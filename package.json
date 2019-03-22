@@ -9,7 +9,6 @@
   "author": "Joabe Mendes",
   "license": "ISC",
   "dependencies": {
-    "geckodriver": "^1.16.0",
     "protractor": "^5.4.2"
   }
 }

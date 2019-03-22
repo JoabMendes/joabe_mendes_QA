@@ -78,8 +78,7 @@ for locale in locales:
 - Node.js and npm:
     If you are running tests in you local environment, you will need Node.js and npm installed in you machine.
     Check how to install them on:: https://www.npmjs.com/get-npm
-- The last stable version of Google Chrome
-- The last stable version of Firefox
+- The last stable version of Google Chrome.
 
 ### Install
 
@@ -97,5 +96,17 @@ in the `test.js` file:
 $ ./test_dev.sh
 ```
 
-The tests are run in the Google Chrome and Firefox browsers in a headless configuration. You can change that by modifying the
-`multiCapabilities` option in the `test.js` file.
+The tests are run in the Google Chrome browser in a headless configuration. You can change that by modifying the
+`multiCapabilities` option in the `test.js` file. For example, if you want to add Firefox testing, just add this 
+option into the array:
+```javascript
+  {
+      browserName: 'firefox',
+      firefoxOptions: {
+                args: ['--headless']
+      },
+      'moz:firefoxOptions': {
+      args: ['--headless']
+     }
+  }
+```

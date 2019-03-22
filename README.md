@@ -72,6 +72,13 @@ for locale in locales:
     5. Run form submission routine failure
 ```
 
+I also added a `.travis.yml` config file to run the tests on [Travis](https://travis-ci.com/), 
+which has nice features for continuous integration. 
+
+*The travis badge might display 
+failure if the login page displays the 'maintenance' status. This status changes 
+the form submit button behaviour, making the tests fail*.
+
 ### Requirements
 
 - Unix environment

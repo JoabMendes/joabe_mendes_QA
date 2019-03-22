@@ -60,13 +60,14 @@ describe('Test Ormuco Login Failure:', function () {
             let dropdown = element(by.css('.lang_menu'));
             // Click on locale dropdown
             dropdown.click().then(function () {
+                browser.driver.sleep(1000);
                 browser.waitForAngular();
                 let locale_selector = dropdown.element(by.cssContainingText(
                     '.lang_name', LOCALES_SELECTORS[locale])
                 );
                 // Click on specified locale
                 locale_selector.click().then(function () {
-                    // browser.waitForAngular();
+                    browser.driver.sleep(3000);
                     let title = element(
                         by.css('[translate="SIGN IN PORTAL"]')
                     );
@@ -74,7 +75,7 @@ describe('Test Ormuco Login Failure:', function () {
                         protractor.ExpectedConditions.textToBePresentInElement(
                             title, LOCALES_TITLES[locale]
                         ),
-                        6000
+                        10000
                     );
                     // Verify if locale was changed to french
                     expect(

@@ -8,10 +8,27 @@
  * */
 
 exports.config = {
-  framework: 'jasmine',
-  seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
-  specs: [
-      'tests/test_login_failure.js',
-      'tests/test_login_failure_locales.js',
-  ]
+    framework: 'jasmine',
+    seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
+    specs: [
+        'tests/test_login_failure.js',
+        'tests/test_login_failure_locales.js',
+    ],
+    multiCapabilities: [
+        {
+            browserName: 'firefox',
+            firefoxOptions: {
+                args: ['--headless']
+            },
+            'moz:firefoxOptions': {
+                args: ['--headless']
+            }
+        },
+        {
+            browserName: 'chrome',
+            chromeOptions: {
+                args: ["--headless"]
+            }
+        }
+    ]
 };

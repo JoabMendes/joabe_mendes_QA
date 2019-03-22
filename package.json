@@ -1,0 +1,14 @@
+{
+  "name": "joabe_mendes_qa",
+  "version": "1.0.0",
+  "description": "Ormuco - Software Developer In Test - Technical Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test_dev.sh"
+  },
+  "author": "Joabe Mendes",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.4.2"
+  }
+}
